@@ -43,16 +43,31 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 }
 [data-testid="stSidebar"] .stRadio label:hover { background: #334155; }
 
-/* ── Metric cards ── */
 .metric-card {
-    background: linear-gradient(135deg, #1e3a5f 0%, #1e293b 100%);
-    border: 1px solid #334155; border-radius: 12px;
-    padding: 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    background: linear-gradient(135deg, #6A0DAD 0%, #3B0764 100%);
+    border: 1px solid #9333EA;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     transition: transform 0.2s;
 }
-.metric-card:hover { transform: translateY(-2px); }
-.metric-value { font-size: 2rem; font-weight: 700; color: #38bdf8; }
-.metric-label { font-size: 0.85rem; color: #94a3b8; margin-top: 4px; }
+
+.metric-card:hover {
+    transform: translateY(-2px);
+}
+
+.metric-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #F5F3FF;
+}
+
+.metric-label {
+    font-size: 0.85rem;
+    color: #E9D5FF;
+    margin-top: 4px;
+}
 
 /* ── Risk badges ── */
 .risk-low    { background:#064e3b; color:#34d399; border:1px solid #34d399; padding:8px 20px; border-radius:20px; font-weight:600; }
@@ -147,8 +162,19 @@ with st.sidebar:
 # PAGE 1 — OVERVIEW
 # ══════════════════════════════════════════════════════════════════════════════
 if page == "🏠  Overview":
-    st.markdown("## 🩺 DiabetesAI Pro — Clinical Decision Support Dashboard")
-    st.markdown("*Predictive modelling with Explainable AI for diabetes risk assessment*")
+
+    st.markdown("""
+    <h1 style='text-align: center; color: red; font-size: 42px;'>
+        🩺 Diabetes AI Project for Clinical Decision Support Dashboard
+    </h1>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+    <h3 style='text-align: center; font-size: 28px;'>
+        <i>Predictive Modelling with Explainable AI for Diabetes Risk Assessment</i>
+    </h3>
+    """, unsafe_allow_html=True)
+
     st.markdown("---")
 
     # Summary metrics across models
